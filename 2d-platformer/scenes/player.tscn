@@ -181,7 +181,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ye16i")
 animation = &"run"
 autoplay = "idle"
-frame_progress = 0.8622748
+frame_progress = 0.5015311
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=125582492]
 shape = SubResource("CapsuleShape2D_qhqgy")

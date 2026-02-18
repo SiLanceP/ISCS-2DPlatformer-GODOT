@@ -170,18 +170,21 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
-radius = 40.0
-height = 84.0
+radius = 16.0
+height = 54.0
 
 [node name="Player" type="CharacterBody2D" unique_id=467500154]
 script = ExtResource("1_dqkch")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1762158041]
+zoom = Vector2(2, 2)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=243407738]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ye16i")
-animation = &"run"
+animation = &"fall"
 autoplay = "idle"
-frame_progress = 0.5015311
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=125582492]
+position = Vector2(-1, 16)
 shape = SubResource("CapsuleShape2D_qhqgy")

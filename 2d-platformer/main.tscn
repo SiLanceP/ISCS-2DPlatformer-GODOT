@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://f36d81f0vusl" path="res://level_root.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ckmgoh7ixbk3g" path="res://scenes/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c8r5gkpmslfjb" path="res://scenes/moving_platform.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=1178574023]
 
@@ -9,3 +10,17 @@
 
 [node name="Player" parent="." unique_id=467500154 instance=ExtResource("1_ig7tw")]
 position = Vector2(281, 201)
+
+[node name="Moving Platforms" type="Node2D" parent="." unique_id=98720150]
+
+[node name="MovingPlatform" parent="Moving Platforms" unique_id=2099507112 instance=ExtResource("3_h2yge")]
+position = Vector2(347, 494)
+
+[node name="MovingPlatform2" parent="Moving Platforms" unique_id=1265189076 instance=ExtResource("3_h2yge")]
+position = Vector2(468, 150)
+
+[node name="MovingPlatform3" parent="Moving Platforms" unique_id=763474105 instance=ExtResource("3_h2yge")]
+position = Vector2(757, 150)
+
+[node name="MovingPlatform4" parent="Moving Platforms" unique_id=1006247302 instance=ExtResource("3_h2yge")]
+position = Vector2(616, 393)

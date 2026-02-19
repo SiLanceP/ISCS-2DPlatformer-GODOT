@@ -1,4 +1,4 @@
 extends Node
 
 
-signal banana_collected(value: int) 
+signal banana_collected(value: int)

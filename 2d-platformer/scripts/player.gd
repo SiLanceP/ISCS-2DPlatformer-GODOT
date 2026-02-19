@@ -53,3 +53,7 @@ func _physics_process(delta: float) -> void:
 	#One-way platforms
 	if is_on_floor() and Input.is_action_just_pressed("down"):
 		position.y += 1.0
+
+
+func _on_jumpie_body_entered(body: Node2D) -> void:
+		pass

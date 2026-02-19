@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://2t24yhqi5vyp"]
+
+[ext_resource type="Texture2D" uid="uid://cko1yy7lx6lm5" path="res://assets/Off.png" id="1_awgg3"]
+[ext_resource type="Script" uid="uid://dqfnntiomebi" path="res://jumpie.gd" id="1_nnkwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnkwa"]
+size = Vector2(146, 39)
+
+[node name="jumpie" type="Area2D" unique_id=1371401926]
+script = ExtResource("1_nnkwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1720079862]
+position = Vector2(-1.1444092e-05, 7.6293945e-06)
+scale = Vector2(4.53125, 7.8)
+texture = ExtResource("1_awgg3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1993124034]
+position = Vector2(0, -19.5)
+shape = SubResource("RectangleShape2D_nnkwa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

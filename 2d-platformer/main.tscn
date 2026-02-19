@@ -3,13 +3,17 @@
 [ext_resource type="PackedScene" uid="uid://f36d81f0vusl" path="res://level_root.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://ckmgoh7ixbk3g" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://c8r5gkpmslfjb" path="res://scenes/moving_platform.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://2t24yhqi5vyp" path="res://jumpie.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://mqay60g4eute" path="res://bananas.tscn" id="6_272bh"]
 
 [node name="Main" type="Node2D" unique_id=1178574023]
 
 [node name="LevelRoot" parent="." unique_id=494402656 instance=ExtResource("1_0xm2m")]
+scale = Vector2(1.65, 1.65)
 
 [node name="Player" parent="." unique_id=467500154 instance=ExtResource("1_ig7tw")]
-position = Vector2(281, 201)
+position = Vector2(320, 201)
+scale = Vector2(1.5, 1.5)
 
 [node name="Moving Platforms" type="Node2D" parent="." unique_id=98720150]
 
@@ -24,3 +28,23 @@ position = Vector2(757, 150)
 
 [node name="MovingPlatform4" parent="Moving Platforms" unique_id=1006247302 instance=ExtResource("3_h2yge")]
 position = Vector2(616, 393)
+
+[node name="jumpie" parent="." unique_id=1371401926 instance=ExtResource("4_1bvp3")]
+position = Vector2(2044, 962)
+
+[node name="jumpie2" parent="." unique_id=1817067126 instance=ExtResource("4_1bvp3")]
+position = Vector2(1143, 1172)
+
+[node name="bananas" parent="." unique_id=2076241018 instance=ExtResource("6_272bh")]
+position = Vector2(1037, 1089)
+
+[node name="bananas2" parent="." unique_id=574780367 instance=ExtResource("6_272bh")]
+position = Vector2(1335, 1104)
+
+[node name="bananas3" parent="." unique_id=741849388 instance=ExtResource("6_272bh")]
+position = Vector2(1522, 1010)
+
+[node name="bananas4" parent="." unique_id=1975215451 instance=ExtResource("6_272bh")]
+position = Vector2(1796, 913)
+
+[connection signal="body_entered" from="jumpie" to="Player" method="_on_jumpie_body_entered"]

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cgd3dw5h8fndl"]
+
+[ext_resource type="Script" uid="uid://b31po7t3dcog1" path="res://scenes/entity.gd" id="1_gr72c"]
+[ext_resource type="Texture2D" uid="uid://bwb8cnyw6alag" path="res://assets/cuayo.png" id="1_iiwub"]
+[ext_resource type="AudioStream" uid="uid://d2bpptv1inngf" path="res://assets/audio/speaki.mp3" id="3_lmnk1"]
+[ext_resource type="AudioStream" uid="uid://dn5jnwh81iimb" path="res://assets/audio/uaa.mp3" id="4_ygnst"]
+[ext_resource type="AudioStream" uid="uid://bh0mcxjfnu4xe" path="res://assets/audio/squash.mp3" id="5_afumw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gr72c"]
+radius = 13.0
+
+[node name="Area2D" type="Area2D" unique_id=1887128234]
+script = ExtResource("1_gr72c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2033989531]
+texture_filter = 1
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_iiwub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=27922471]
+position = Vector2(1, 0)
+shape = SubResource("CapsuleShape2D_gr72c")
+
+[node name="speaki" type="AudioStreamPlayer2D" parent="." unique_id=756248247]
+stream = ExtResource("3_lmnk1")
+volume_db = -10.0
+
+[node name="uaa" type="AudioStreamPlayer2D" parent="." unique_id=1849640574]
+stream = ExtResource("4_ygnst")
+volume_db = -10.0
+
+[node name="cuayo" type="AudioStreamPlayer2D" parent="." unique_id=1638296791]
+stream = ExtResource("5_afumw")
+volume_db = -10.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

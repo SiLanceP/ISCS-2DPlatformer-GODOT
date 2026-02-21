@@ -13,7 +13,6 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		
-		# Check if the player is falling DOWNWARD onto the entity
 		if body.velocity.y > 0:
 			
 			#Make the player bounce

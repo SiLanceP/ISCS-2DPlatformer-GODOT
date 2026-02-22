@@ -12,7 +12,7 @@
 scale = Vector2(1.65, 1.65)
 
 [node name="Player" parent="." unique_id=467500154 instance=ExtResource("1_ig7tw")]
-position = Vector2(320, 201)
+position = Vector2(530, 138)
 scale = Vector2(1.5, 1.5)
 
 [node name="Moving Platforms" type="Node2D" parent="." unique_id=98720150]
